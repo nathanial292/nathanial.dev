@@ -34,7 +34,10 @@ const sassRule = {
           reloadAll: process.env.NODE_ENV === 'development'
         }
       } :
-      'style-loader',
+      { loader: 'style-loader', options: {
+        insertInto: () => document.querySelector("#id"),
+        singleton: true,
+      }},
       // Translates CSS into CommonJS
       'css-loader',
       // Compiles Sass to CSS

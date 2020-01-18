@@ -6,7 +6,7 @@ const expressStaticGzip = require('express-static-gzip')
 const app = express()
 
 const PORT = process.env.PORT
-
+app.disable('x-powered-by')
 app.use(cors())
 
 // Paths

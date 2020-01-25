@@ -1,3 +1,25 @@
 body, html { 
     font-family: "Lato", "Roboto", "sans-serif";
+    margin: 0;
+}
+
+
+// Sass
+@function randomBokeh($size: 100, $spread: 3) {
+    $randomColor: rgba(random()*255, random()*255, random()*255, random());
+    $singleBokeh: radial-gradient(random()*$size+px at random()*$size*$spread+px random()*$size*$spread+px, $randomColor, $randomColor 96%, transparent);
+    @return $singleBokeh;
+}
+
+// All the bokehs
+@function gimmeBokehs($howMany: 10, $size: 100, $spread: 3) {
+    $bgList: ();
+    @for $i from 1 through $howMany {
+        $bgList: append($bgList, randomBokeh($size, $spread), comma);
+    }
+    @return $bgList;
+}
+
+.bokehs {
+    background: gimmeBokehs(20, 60, 10)
 }

@@ -1,10 +1,24 @@
 import React, { Component } from 'react'
 import '../styles/style.scss'
+import { makeStyles } from '@material-ui/core/styles';
 
-const Home = ({ }) => (
-  <div>
-    <h1>Hello World</h1>
-  </div>
-)
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: "100%",
+    height: "100vh"
+  },
+  h1: {
+    margin: 0
+  }
+}))
+
+const Home = () => {
+  const classes = useStyles()
+  return (
+    <div className={`${classes.root} ${"bokehs"}`}>
+      <h1 className={classes.h1}>Welcome</h1>
+    </div>
+  )
+}
 
 export default Home

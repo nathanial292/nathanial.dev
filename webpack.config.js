@@ -53,7 +53,7 @@ const baseConfig = {
   output: {
     path: buildFolder,
     filename: 'js/[name].js',
-    publicPath: '/build/'
+    publicPath: '/'
   },
 
   module: {

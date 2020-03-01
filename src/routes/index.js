@@ -2,6 +2,7 @@ import { hot } from 'react-hot-loader/root'
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import '../styles/style.scss'
 //import { Container } from 'react-bootstrap'
 
 // Component Imports...
@@ -17,7 +18,6 @@ class App extends Component {
   render () {
     return (
       <div>
-
           <Helmet>
             <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
             <title>Nathanial Howard</title>
@@ -35,7 +35,6 @@ class App extends Component {
             ))}
             <Route render={(props) => <NoMatch {...props} />} />
           </Switch>
-
       </div>
     )
   }

@@ -53,7 +53,7 @@ const baseConfig = {
   output: {
     path: buildFolder,
     filename: 'js/[name].js',
-    publicPath: '/'
+    publicPath: 'http://localhost:3000/',
   },
 
   module: {
@@ -94,13 +94,14 @@ const devConfig = {
 
   entry: [
     '@babel/polyfill',
+    'webpack/hot/dev-server',
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000',
     resolve(sourceFolder, 'index')
   ],
 
   output: {
-    hotUpdateChunkFilename: '.hot/[id].[hash].hot-update.js',
-    hotUpdateMainFilename: '.hot/[hash].hot-update.json'
+    hotUpdateChunkFilename: 'hot/hot-update.js',
+    hotUpdateMainFilename: 'hot/hot-update.json'
   }
 }
 

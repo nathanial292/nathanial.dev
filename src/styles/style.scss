@@ -3,7 +3,6 @@ body, html {
     margin: 0;
 }
 
-
 // Sass
 @function randomBokeh($size: 100, $spread: 3) {
     $randomColor: rgba(random()*255, random()*255, random()*255, random());

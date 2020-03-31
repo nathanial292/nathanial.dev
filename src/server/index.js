@@ -55,6 +55,6 @@ const errorHandler = (err, req, res, next) => {
 app.use(errorHandler)
 
 
-app.listen(3000, () =>
-  console.log(`Started on port 3000!`)
+app.listen(3002, () =>
+  console.log(`Started on port 3002!`)
 )

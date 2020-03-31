@@ -7,7 +7,7 @@ COPY . .
 RUN yarn
 
 RUN yarn run build:prod
-EXPOSE 3000
+EXPOSE 3002
 
 # Remove source files
 #RUN find ./src -mindepth 1 ! -regex '^./src/server\(/.*\)?' -delete

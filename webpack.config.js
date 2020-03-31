@@ -50,12 +50,6 @@ const baseConfig = {
 
   context: projectRoot,
 
-  output: {
-    path: buildFolder,
-    filename: 'js/[name].js',
-    publicPath: 'http://localhost:3000/',
-  },
-
   module: {
     rules: [babelRule, sassRule]
   },
@@ -74,6 +68,12 @@ const baseConfig = {
 
 const devConfig = {
   mode: 'development',
+
+  output: {
+    path: buildFolder,
+    filename: 'js/[name].js',
+    publicPath: 'http://localhost:3002/',
+  },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -112,6 +112,12 @@ const prodConfig = {
     '@babel/polyfill',
     resolve(sourceFolder, 'index')
   ],
+
+  output: {
+    path: buildFolder,
+    filename: 'js/[name].js',
+    publicPath: '/',
+  },
 
   optimization: {
     minimize: true,
